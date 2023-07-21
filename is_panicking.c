@@ -10,7 +10,7 @@ g_t *get_g()
     __asm__("mov %0, x28\n"
             : "=r"(g));
 #elif defined(__x86_64__)
-    __asm__("movl %%r14, %0\n"
+    __asm__("mov %%r14, %0\n"
             : "=r"(g));
 #else
 #error "Unsupported architecture"
